@@ -1,0 +1,34 @@
+{
+  "name": "ls-countdown",
+  "version": "1.0.0",
+  "description": "Embed your Medium stories in your Website",
+  "main": "index.js",
+  "scripts": {
+    "build-prod": "webpack --mode production",
+    "build-dev": "webpack --mode development"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leandrosimoes/ls-countdown.git"
+  },
+  "keywords": [
+    "countdown",
+    "javascript",
+    "vanilla",
+    "simple"
+  ],
+  "author": "Leandro Simões <leandro.simoes@outlook.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/leandrosimoes/ls-countdown/issues"
+  },
+  "homepage": "https://github.com/leandrosimoes/ls-countdown#readme",
+  "devDependencies": {
+    "css-loader": "^1.0.0",
+    "style-loader": "^0.23.0",
+    "ts-loader": "^4.5.0",
+    "typescript": "^2.9.2",
+    "webpack": "^4.17.2",
+    "webpack-cli": "^3.1.0"
+  }
+}
