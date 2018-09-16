@@ -42,7 +42,7 @@ export default class LsCountdown {
         this.COUNTDOWN_INTERVAL = setInterval(() => {
             let current_date = new Date().getTime()
             let seconds_left = (this.targetDate.getTime() - current_date) / 1000
-            let days, hours, minutes, seconds
+            let days: any, hours: any, minutes: any, seconds: any
 
             days = seconds_left / 86400
             seconds_left = seconds_left % 86400
@@ -53,10 +53,10 @@ export default class LsCountdown {
             minutes = seconds_left / 60
             seconds = seconds_left % 60
 
-            days = (days > 0 ? (days > 9 ? days : `0${days}`) : '00') + this.sufixes.days
-            hours = (hours > 0 ? (hours > 9 ? hours : `0${hours}`) : '00') + this.sufixes.hours
-            minutes = (minutes > 0 ? (minutes > 9 ? minutes : `0${minutes}`) : '00') + this.sufixes.minutes
-            seconds = (seconds > 0 ? (seconds > 9 ? seconds : `0${seconds}`) : '00') + this.sufixes.seconds
+            days = parseInt((days > 0 ? (days > 9 ? days : `0${days}`) : '00')).toString() + this.sufixes.days
+            hours = parseInt((hours > 0 ? (hours > 9 ? hours : `0${hours}`) : '00')).toString() + this.sufixes.hours
+            minutes = parseInt((minutes > 0 ? (minutes > 9 ? minutes : `0${minutes}`) : '00')).toString() + this.sufixes.minutes
+            seconds = parseInt((seconds > 0 ? (seconds > 9 ? seconds : `0${seconds}`) : '00')).toString() + this.sufixes.seconds
 
             this.CURRENT_TIME = new CurrentTime({ days, hours, minutes, seconds })
 

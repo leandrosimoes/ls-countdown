@@ -5,9 +5,9 @@ export default class CurrentTime {
     seconds: string;
 
     constructor({ days = '0', hours = '0', minutes = '0', seconds = '0' }) {
-        this.days = parseInt(days).toString();
-        this.hours = parseInt(hours).toString();
-        this.minutes = parseInt(minutes).toString();
-        this.seconds = parseInt(seconds).toString();
+        this.days = days;
+        this.hours = hours;
+        this.minutes = minutes;
+        this.seconds = seconds;
     }
 }
