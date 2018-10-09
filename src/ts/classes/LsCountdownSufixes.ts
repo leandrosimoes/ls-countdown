@@ -1,4 +1,4 @@
-export default class Sufixes {
+export default class LsCountdownSufixes {
     days: string
     hours: string
     minutes: string

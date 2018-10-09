@@ -1,4 +1,4 @@
-export default class CurrentTime {
+export default class LsCountdownTick {
     days: string;
     hours: string;
     minutes: string;
