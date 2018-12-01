@@ -10,30 +10,30 @@ describe('All Validations', () => {
     })
 
     it('Must be defined', () => {
-        let targetDate: Date = new Date(_currentYear + 1, 1, 1);
-        let options = new LsCountdownOptions({ targetDate })
-        let countdown = new LsCountdown(options)
+        const targetDate: Date = new Date(_currentYear + 1, 1, 1);
+        const options = new LsCountdownOptions({ targetDate })
+        const countdown = new LsCountdown(options)
 
         expect(countdown).toBeDefined()
         expect(countdown).not.toBeUndefined()
     })
 
-    it('On start ticking', (done) => {
-        let onStart = (tick: LsCountdownTick) => {
+    it('On start ticking', done => {
+        const onStart = (tick: LsCountdownTick) => {
             expect(tick).toBeDefined()
             done()
         }
 
-        let targetDate: Date = new Date(_currentYear + 1, 1, 1);
-        let options = new LsCountdownOptions({ targetDate, onStart })
-        let countdown = new LsCountdown(options)
+        const targetDate: Date = new Date(_currentYear + 1, 1, 1);
+        const options = new LsCountdownOptions({ targetDate, onStart })
+        const countdown = new LsCountdown(options)
 
         countdown.start()
     })
 
-    it('On tick', (done) => {
+    it('On tick', done => {
         let times: number = 0
-        let onTick = (tick: LsCountdownTick) => {
+        const onTick = (tick: LsCountdownTick) => {
             if (times === 5) {
                 expect(tick).toBeDefined()
                 done()
@@ -42,33 +42,33 @@ describe('All Validations', () => {
             times++
         }
 
-        let targetDate: Date = new Date(_currentYear + 1, 1, 1);
-        let options = new LsCountdownOptions({ targetDate, onTick })
-        let countdown = new LsCountdown(options)
+        const targetDate: Date = new Date(_currentYear + 1, 1, 1);
+        const options = new LsCountdownOptions({ targetDate, onTick })
+        const countdown = new LsCountdown(options)
 
         countdown.start()
     })
 
-    it('On stop ticking', (done) => {
-        let onStop = (tick: LsCountdownTick) => {
+    it('On stop ticking', done => {
+        const onStop = (tick: LsCountdownTick) => {
             expect(tick).toBeDefined()
             done()
         }
 
-        let targetDate: Date = new Date(_currentYear + 1, 1, 1);
-        let options = new LsCountdownOptions({ targetDate, onStop })
-        let countdown = new LsCountdown(options)
+        const targetDate: Date = new Date(_currentYear + 1, 1, 1);
+        const options = new LsCountdownOptions({ targetDate, onStop })
+        const countdown = new LsCountdown(options)
 
         countdown.start()
         countdown.stop()
     })
 
     it('Change date', () => {
-        let targetDate: Date = new Date(_currentYear + 1, 1, 1);
-        let targetDate2: Date = new Date(_currentYear + 2, 1, 1);
+        const targetDate: Date = new Date(_currentYear + 1, 1, 1);
+        const targetDate2: Date = new Date(_currentYear + 2, 1, 1);
 
-        let options = new LsCountdownOptions({ targetDate })
-        let countdown = new LsCountdown(options)
+        const options = new LsCountdownOptions({ targetDate })
+        const countdown = new LsCountdown(options)
 
         expect(countdown.targetDate === targetDate).toBe(true)
         expect(countdown.targetDate === targetDate2).toBe(false)
@@ -80,18 +80,35 @@ describe('All Validations', () => {
     })
 
     it('Intern validations', () => {
-        let rightDate: Date = new Date(_currentYear + 1, 1, 1);
-        let wrongTargetDate: Date = new Date(_currentYear - 1, 1, 1);
+        const rightDate: Date = new Date(_currentYear + 1, 1, 1);
+        const wrongTargetDate: Date = new Date(_currentYear - 1, 1, 1);
 
         expect(() => {
-            let options = new LsCountdownOptions({ wrongTargetDate })
-            let countdown = new LsCountdown(options)
+            const options = new LsCountdownOptions({ wrongTargetDate })
+            const countdown = new LsCountdown(options)
         }).toThrowError('The target date must be a foward date')
 
         expect(() => {
-            let options = new LsCountdownOptions({ rightDate })
-            let countdown = new LsCountdown(options)
+            const options = new LsCountdownOptions({ rightDate })
+            const countdown = new LsCountdown(options)
             countdown.changeTargetDate(wrongTargetDate);
         }).toThrowError('The target date must be a foward date')
+    })
+
+    it('Must change sufixes', done => {
+        const targetDate: Date = new Date(_currentYear + 1, 1, 1);
+        const sufixes = new LsCountdownSufixes({ days: ' days', hours: ' hours', minutes: ' minutes', seconds: ' seconds' })
+
+        const onTick = (tick: LsCountdownTick) => {
+            expect(tick.days.indexOf(sufixes.days)).toBeGreaterThan(-1)
+            expect(tick.hours.indexOf(sufixes.hours)).toBeGreaterThan(-1)
+            expect(tick.minutes.indexOf(sufixes.minutes)).toBeGreaterThan(-1)
+            expect(tick.seconds.indexOf(sufixes.seconds)).toBeGreaterThan(-1)
+            done()
+        }
+
+        const options = new LsCountdownOptions({ targetDate, onStart: undefined, onStop: undefined, onTick, sufixes })
+        const countdown = new LsCountdown(options)
+        countdown.start()
     })
 })
