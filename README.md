@@ -3,9 +3,9 @@
 Just a simple countdown.
 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/09b56ee74cd044af8ab8ee55adec9d6e)](https://app.codacy.com/app/leandrosimoes/ls-countdown?utm_source=github.com&utm_medium=referral&utm_content=leandrosimoes/ls-countdown&utm_campaign=Badge_Grade_Settings)
-[![Build Status](https://travis-ci.org/leandrosimoes/ls-countdown.svg?branch=master)](https://travis-ci.org/leandrosimoes/ls-docs) 
-[![npm version](https://badge.fury.io/js/ls-countdown.svg)](https://badge.fury.io/js/ls-docs) 
-[![CircleCI](https://circleci.com/gh/leandrosimoes/ls-countdown.svg?style=svg)](https://circleci.com/gh/leandrosimoes/ls-docs)
+[![Build Status](https://travis-ci.org/leandrosimoes/ls-countdown.svg?branch=master)](https://travis-ci.org/leandrosimoes/ls-countdown) 
+[![npm version](https://badge.fury.io/js/ls-countdown.svg)](https://badge.fury.io/js/ls-countdown) 
+[![CircleCI](https://circleci.com/gh/leandrosimoes/ls-countdown.svg?style=svg)](https://circleci.com/gh/leandrosimoes/ls-countdown)
 
 ### Instalation
 
