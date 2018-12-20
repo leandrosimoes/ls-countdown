@@ -1,7 +1,7 @@
 {
   "name": "ls-countdown",
-  "version": "1.0.2",
-  "description": "Embed your Medium stories in your Website",
+  "version": "1.0.3",
+  "description": "Just a simple countdown",
   "main": "./dist/node/index",
   "types": "./dist/node/index.d.ts",
   "scripts": {
