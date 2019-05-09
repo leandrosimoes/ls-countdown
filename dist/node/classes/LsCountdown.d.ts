@@ -11,6 +11,7 @@ export default class LsCountdown {
     protected CURRENT_TIME: LsCountdownTick;
     constructor(options: LsCountdownOptions);
     private validateTargetDate;
+    private isLeapYear;
     private doTick;
     stop(): void;
     start(): void;

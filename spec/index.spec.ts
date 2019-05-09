@@ -97,9 +97,10 @@ describe('All Validations', () => {
 
     it('Must change sufixes', done => {
         const targetDate: Date = new Date(_currentYear + 1, 1, 1);
-        const sufixes = new LsCountdownSufixes({ days: ' days', hours: ' hours', minutes: ' minutes', seconds: ' seconds' })
+        const sufixes = new LsCountdownSufixes({ years: ' years', days: ' days', hours: ' hours', minutes: ' minutes', seconds: ' seconds' })
 
         const onTick = (tick: LsCountdownTick) => {
+            expect(tick.years.indexOf(sufixes.years)).toBeGreaterThan(-1)
             expect(tick.days.indexOf(sufixes.days)).toBeGreaterThan(-1)
             expect(tick.hours.indexOf(sufixes.hours)).toBeGreaterThan(-1)
             expect(tick.minutes.indexOf(sufixes.minutes)).toBeGreaterThan(-1)

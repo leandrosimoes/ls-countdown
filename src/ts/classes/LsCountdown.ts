@@ -28,26 +28,40 @@ export default class LsCountdown {
         if (targetDate <= new Date()) throw new Error("The target date must be a foward date")
     }
 
+    private isLeapYear(year:number) {
+      return ((year % 4 == 0) && (year % 100 != 0)) || (year % 400 == 0);
+    }
+
     private doTick(callback: Function | undefined) {
-        let current_date = new Date().getTime()
-        let seconds_left = (this.targetDate.getTime() - current_date) / 1000
-        let days: any, hours: any, minutes: any, seconds: any
+        let current_date = new Date()
+        let current_year = current_date.getFullYear()
+        let seconds_left = (this.targetDate.getTime() - current_date.getTime()) / 1000
+        let years: any, days: any, hours: any, minutes: any, seconds: any
 
-        days = seconds_left / 86400
-        seconds_left = seconds_left % 86400
+        years = Math.floor(seconds_left / 31536000)
 
-        hours = seconds_left / 3600
-        seconds_left = seconds_left % 3600
+        for (let i = 1; i <= years; i++) {
+            seconds_left -= this.isLeapYear(current_year - i) ? 31622400 : 31536000
+        }
 
-        minutes = seconds_left / 60
-        seconds = seconds_left % 60
+        days = Math.floor(seconds_left / 86400)
+        seconds_left -= days * 86400
 
-        days = parseInt((days > 0 ? (days > 9 ? days : `0${days}`) : '00')).toString() + this.sufixes.days
-        hours = parseInt((hours > 0 ? (hours > 9 ? hours : `0${hours}`) : '00')).toString() + this.sufixes.hours
-        minutes = parseInt((minutes > 0 ? (minutes > 9 ? minutes : `0${minutes}`) : '00')).toString() + this.sufixes.minutes
-        seconds = parseInt((seconds > 0 ? (seconds > 9 ? seconds : `0${seconds}`) : '00')).toString() + this.sufixes.seconds
+        hours = Math.floor(seconds_left / 3600) % 24
+        seconds_left -= hours * 3600
 
-        this.CURRENT_TIME = new LsCountdownTick({ days, hours, minutes, seconds })
+        minutes = Math.floor(seconds_left / 60) % 60
+        seconds_left -= minutes * 60
+
+        seconds = Math.floor(seconds_left % 60)
+
+        years = `${(years > 9 ? years : `0${years}`)}${this.sufixes.years}`
+        days = `${(days > 9 ? days : `0${days}`)}${this.sufixes.days}`
+        hours = `${(hours > 9 ? hours : `0${hours}`)}${this.sufixes.hours}`
+        minutes = `${(minutes > 9 ? minutes : `0${minutes}`)}${this.sufixes.minutes}`
+        seconds = `${(seconds > 9 ? seconds : `0${seconds}`)}${this.sufixes.seconds}`
+
+        this.CURRENT_TIME = new LsCountdownTick({ years, days, hours, minutes, seconds })
 
         if (typeof callback === 'function') callback(this.CURRENT_TIME)
     }

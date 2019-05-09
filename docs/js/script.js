@@ -1,11 +1,13 @@
 (() => {
     document.addEventListener("DOMContentLoaded", function () {
-        let currentYear = new Date().getFullYear();
-        let targetDate = new Date(currentYear + 1, 0, 1);
+        let currentYear = new Date().getFullYear() + 2;
+        let targetDate = new Date(currentYear, 0, 1);
         let onStart = () => {
+            document.querySelector('.next-year').innerHTML = currentYear
             document.querySelectorAll('.countdown-item').forEach(item => item.classList.add('show'))
         }
-        let onTick = ({ days, hours, minutes, seconds }) => {
+        let onTick = ({ years, days, hours, minutes, seconds }) => {
+            document.querySelector('.countdown-item.years').innerHTML = years;
             document.querySelector('.countdown-item.days').innerHTML = days;
             document.querySelector('.countdown-item.hours').innerHTML = hours;
             document.querySelector('.countdown-item.minutes').innerHTML = minutes;

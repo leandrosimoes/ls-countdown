@@ -70,20 +70,28 @@ h1 {
     opacity: .1;
 }
 
-.countdown-item.days {
+.countdown-item.years {
     animation-delay: 1s;
 }
 
-.countdown-item.hours {
+.countdown-item.days {
     animation-delay: 1.5s;
 }
 
-.countdown-item.minutes {
+.countdown-item.hours {
     animation-delay: 2s;
 }
 
-.countdown-item.seconds {
+.countdown-item.minutes {
     animation-delay: 2.5s;
+}
+
+.countdown-item.seconds {
+    animation-delay: 3s;
+}
+
+.countdown-item.years::after {
+    content: attr(data-years);
 }
 
 .countdown-item.days::after {
