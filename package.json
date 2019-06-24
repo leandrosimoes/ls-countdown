@@ -1,6 +1,6 @@
 {
   "name": "ls-countdown",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Just a simple countdown",
   "main": "./dist/node/index",
   "types": "./dist/node/index.d.ts",
