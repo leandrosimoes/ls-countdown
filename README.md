@@ -3,9 +3,7 @@
 Just a simple countdown.
 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/83b3046325f84d719f1705ceb6a64254)](https://app.codacy.com/app/leandrosimoes/ls-countdown?utm_source=github.com&utm_medium=referral&utm_content=leandrosimoes/ls-countdown&utm_campaign=Badge_Grade_Dashboard)
-[![Build Status](https://travis-ci.org/leandrosimoes/ls-countdown.svg?branch=master)](https://travis-ci.org/leandrosimoes/ls-countdown) 
 [![npm version](https://badge.fury.io/js/ls-countdown.svg)](https://badge.fury.io/js/ls-countdown) 
-[![CircleCI](https://circleci.com/gh/leandrosimoes/ls-countdown.svg?style=svg)](https://circleci.com/gh/leandrosimoes/ls-countdown)
 
 ### Instalation
 
