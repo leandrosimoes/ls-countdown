@@ -1,6 +1,6 @@
 {
   "name": "ls-countdown",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Just a simple countdown",
   "main": "./dist/node/index",
   "types": "./dist/node/index.d.ts",
@@ -26,6 +26,7 @@
     "url": "https://github.com/leandrosimoes/ls-countdown/issues"
   },
   "homepage": "https://github.com/leandrosimoes/ls-countdown#readme",
+  "publishConfig": { "registry": "https://npm.pkg.github.com/" },
   "devDependencies": {
     "@types/jasmine": "^3.4.4",
     "jasmine": "^3.5.0",
