@@ -1,10 +1,11 @@
 {
   "name": "ls-countdown",
-  "version": "1.1.2",
+  "version": "1.2.0",
   "description": "Just a simple countdown",
   "main": "./dist/node/index",
   "types": "./dist/node/index.d.ts",
   "scripts": {
+    "build": "webpack --mode production",
     "build-prod": "webpack --mode production",
     "build-dev": "webpack --mode development",
     "test": "ts-node node_modules/jasmine/bin/jasmine"
@@ -26,15 +27,15 @@
   },
   "homepage": "https://github.com/leandrosimoes/ls-countdown#readme",
   "devDependencies": {
-    "@types/jasmine": "^2.8.9",
-    "jasmine": "^3.2.0",
-    "ts-loader": "^5.2.1",
-    "ts-node": "^7.0.1",
-    "typescript": "^3.1.1",
-    "webpack": "^4.20.2",
-    "webpack-cli": "^3.1.2"
+    "@types/jasmine": "^3.4.4",
+    "jasmine": "^3.5.0",
+    "ts-loader": "^6.2.0",
+    "ts-node": "^8.4.1",
+    "typescript": "^3.6.4",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.9"
   },
   "dependencies": {
-    "@types/node": "^10.12.11"
+    "@types/node": "^12.11.1"
   }
 }
