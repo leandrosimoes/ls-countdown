@@ -4,6 +4,8 @@ Just a simple countdown.
 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/83b3046325f84d719f1705ceb6a64254)](https://app.codacy.com/app/leandrosimoes/ls-countdown?utm_source=github.com&utm_medium=referral&utm_content=leandrosimoes/ls-countdown&utm_campaign=Badge_Grade_Dashboard)
 [![npm version](https://badge.fury.io/js/ls-countdown.svg)](https://badge.fury.io/js/ls-countdown) 
+![Node CI](https://github.com/leandrosimoes/ls-countdown/workflows/Node%20CI/badge.svg)
+![Node.js Package](https://github.com/leandrosimoes/ls-countdown/workflows/Node%2Ejs%20Package/badge.svg)
 
 ### Instalation
 
