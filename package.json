@@ -28,6 +28,13 @@
   "homepage": "https://github.com/leandrosimoes/ls-countdown#readme",
   "devDependencies": {
     "@types/jasmine": "^3.4.4",
+    "@typescript-eslint/eslint-plugin": "^2.16.0",
+    "@typescript-eslint/parser": "^2.16.0",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-config-defaults": "^9.0.0",
+    "eslint-config-prettier": "^6.9.0",
+    "eslint-plugin-prettier": "^3.1.2",
     "jasmine": "^3.5.0",
     "ts-loader": "^6.2.0",
     "ts-node": "^8.4.1",

@@ -1,4 +1,4 @@
-import LsCountdownSufixes from "./LsCountdownSufixes"
+import LsCountdownSufixes from './LsCountdownSufixes'
 
 export default class LsCountdownOptions {
     targetDate: Date
@@ -9,17 +9,15 @@ export default class LsCountdownOptions {
 
     constructor({
         targetDate = new Date(),
-        onStart = (() => { }),
-        onStop = (() => { }),
-        onTick = (() => { }),
-        sufixes = new LsCountdownSufixes({})
+        onStart = () => {},
+        onStop = () => {},
+        onTick = () => {},
+        sufixes = new LsCountdownSufixes({}),
     }: any = {}) {
-
         this.targetDate = targetDate
         this.onStart = onStart
         this.onStop = onStop
         this.onTick = onTick
         this.sufixes = sufixes
-
     }
 }

@@ -1,0 +1,31 @@
+{
+  "extends": [
+    "defaults",
+    "airbnb",
+    "prettier",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 2017,
+    "sourceType": "module"
+  },
+  "rules": {
+    "radix": 0,
+    "no-prototype-builtins": 0,
+    "no-return-await": 0,
+    "no-empty": 0,
+    "prettier/prettier": [
+      "error",
+      {
+        "trailingComma": "es5",
+        "singleQuote": true,
+        "printWidth": 100
+      }
+    ]
+  },
+  "plugins": [
+    "prettier",
+    "@typescript-eslint/eslint-plugin"
+  ]
+}
