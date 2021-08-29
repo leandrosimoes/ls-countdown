@@ -2,7 +2,7 @@
 
 Just a simple countdown.
 
-[![Codacy Badge](https://app.codacy.com/project/badge/Grade/1f5df58e1b154540bb7796500b0fd42e)](https://www.codacy.com/gh/leandrosimoes/ls-countdown/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=leandrosimoes/ls-countdown&amp;utm_campaign=Badge_Grade)ade)
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/1f5df58e1b154540bb7796500b0fd42e)](https://www.codacy.com/gh/leandrosimoes/ls-countdown/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=leandrosimoes/ls-countdown&amp;utm_campaign=Badge_Grade)
 [![npm version](https://badge.fury.io/js/ls-countdown.svg)](https://badge.fury.io/js/ls-countdown) 
 ![Node CI](https://github.com/leandrosimoes/ls-countdown/workflows/Node%20CI/badge.svg)
 ![Node.js Package](https://github.com/leandrosimoes/ls-countdown/workflows/Node%2Ejs%20Package/badge.svg)
